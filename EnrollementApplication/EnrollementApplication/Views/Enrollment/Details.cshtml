@@ -27,6 +27,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.IsActive)
         </dt>
 
@@ -39,7 +47,7 @@
         </dt>
 
         <dd>
-            @Html.TextBoxFor(model => model.AssignedCampus)
+            @Html.TextBoxFor(model => model.AssignedCampus, new { @class = "form-control", @readonly = "true" })
         </dd>
 
         <dt>
@@ -55,7 +63,7 @@
         </dt>
 
         <dd>
-            @Html.TextBoxFor(model => model.EnrollmentYear)
+            @Html.TextBoxFor(model => model.EnrollmentYear, new { @class = "form-control", @readonly = "true" })
         </dd>
     </dl>
 </div>
