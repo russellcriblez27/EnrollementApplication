@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EnrollementApplication.Models
 {
-    [Bind(Exclude = "EnrollmentId")]
+    //[Bind(Exclude = "EnrollmentId")]
     public class Enrollment
     {
         public virtual int EnrollmentId { get; set; }
@@ -36,5 +36,9 @@ namespace EnrollementApplication.Models
         [Required(ErrorMessage ="Enrollment year required.")]
         [Range(2018, int.MaxValue, ErrorMessage ="Year of enrollment must be 2018 or later.")]
         public virtual int EnrollmentYear { get; set; }
+
+        [InvalidChars("@#^*", ErrorMessage = "Invalid characters found")]
+        public virtual string Notes { get; set; }
+
     }
 }

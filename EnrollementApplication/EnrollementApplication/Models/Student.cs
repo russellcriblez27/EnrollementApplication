@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EnrollementApplication.Models
 {
-    [Bind(Exclude ="StudentId")]
+    //[Bind(Exclude ="StudentId")]
     public class Student
     {
         public virtual int StudentId { get; set; }
@@ -21,5 +21,10 @@ namespace EnrollementApplication.Models
         [Required]
         [StringLength(50, ErrorMessage = "Your first name is too long.")]
         public virtual string FirstName { get; set; }
+
+        [MinimumAge(20)]
+        public virtual int Age { get; set; }
+
+        
     }
 }
