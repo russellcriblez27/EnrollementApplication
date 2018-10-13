@@ -153,8 +153,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +175,10 @@
     <Compile Include="Migrations\201810131614143_20181013_Update03.cs" />
     <Compile Include="Migrations\201810131614143_20181013_Update03.Designer.cs">
       <DependentUpon>201810131614143_20181013_Update03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810131648210_20181013_Update04.cs" />
+    <Compile Include="Migrations\201810131648210_20181013_Update04.Designer.cs">
+      <DependentUpon>201810131648210_20181013_Update04.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -227,6 +233,16 @@
     <Content Include="Views\Enrollment\Details.cshtml" />
     <Content Include="Views\Enrollment\Edit.cshtml" />
     <Content Include="Views\Enrollment\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -256,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810131614143_20181013_Update03.resx">
       <DependentUpon>201810131614143_20181013_Update03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810131648210_20181013_Update04.resx">
+      <DependentUpon>201810131648210_20181013_Update04.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
