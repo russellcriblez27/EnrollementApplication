@@ -1,0 +1,9 @@
+﻿@model IEnumerable<EnrollementApplication.Models.Student>
+<div id="searchresultsstudent">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.FirstName @item.LastName</li>
+        }
+    </ul>
+</div> 

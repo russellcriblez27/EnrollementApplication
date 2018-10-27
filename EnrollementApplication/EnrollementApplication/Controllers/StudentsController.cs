@@ -20,6 +20,18 @@ namespace EnrollementApplication.Controllers
             return View(db.Students.ToList());
         }
 
+        // partial view Student of the month
+        public ActionResult StudentOfTheMonth()
+        {
+            var student = GetStudentOfTheMonth();
+            return PartialView("StudentOfTheMonth", student);
+        }
+        private Student GetStudentOfTheMonth()
+        {
+            Student student = db.Students.OrderBy(a => System.Guid.NewGuid()).First();
+            return student;
+        }
+
         // GET: Students/Details/5
         public ActionResult Details(int? id)
         {

@@ -21,6 +21,30 @@ namespace EnrollementApplication.Controllers
             return View(enrollments.ToList());
         }
 
+        // partial view search by Student
+        public ActionResult StudentSearch(string q)
+        {
+            var student = GetStudent(q);
+            return PartialView(student);
+        }
+        private List<Student> GetStudent(string searchstring)
+        {
+            return db.Students.Where(a => a.LastName.Contains(searchstring) || a.FirstName.Contains(searchstring)).ToList();
+
+        }
+
+        // partial view search by Course
+        public ActionResult CourseSearch(string q)
+        {
+            var course = GetCourse(q);
+            return PartialView(course);
+        }
+        private List<Course> GetCourse(string searchstring)
+        {
+            return db.Courses.Where(a => a.Title.Contains(searchstring)).ToList();
+
+        }
+
         // GET: Enrollment/Details/5
         public ActionResult Details(int? id)
         {
